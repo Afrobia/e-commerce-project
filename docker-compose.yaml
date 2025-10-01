@@ -1,0 +1,10 @@
+services:
+  postgres:
+    image: postgres:11.7-alpine
+    container_name: e-commerce-postgres-db
+    ports:
+      - 5010:5432
+    environment:
+      POSTGRES_PASSWORD: p4ssw0rd-t3st3-db
+    env_file:
+      - .env
